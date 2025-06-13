@@ -1,0 +1,269 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('luffyvscrocodile.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+
+.navigation .btnLogin-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor:pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px; 
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+}
+
+.wrapper {
+    
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid #62879a00;
+    border-radius: 20px;
+    background-color: #a4b8b1;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*overflow: hidden;*/
+    transition: height .2s ease;
+}
+
+/* background-color: #62879A; */
+
+.wrapper.active {
+    height: 320px;
+    
+}
+
+.wrapper .form-box {
+    width: 80%;
+    padding: 40px;
+    background-color: #A4B8B1;
+}
+
+.form-box h2 {
+    background-color: #62879a;
+    border: 1px solid #62879a;
+    border-radius: 2px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 200px;
+    margin-right: 150px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border: 2px solid #162938;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-70%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-color: #fff;
+    border-radius: 15px;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+    border: 10px solid transparent;
+  border-image: url('user-svgrepo-com.svg') 30 round;
+}
+
+
+
+.remember-forgot {
+    padding-left: 37%;
+    padding-right: 30%;
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.remember-forgot label input {
+    accent-color: #162938;
+    
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #162938;
+    font-weight: 600;
+    font-size: large;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+    justify-items: center;
+}
+
+.botao{
+    padding-left: 25%;
+}
+
+.btn {
+    width: 60%;
+    height: 45px;
+    background: #E2E3E2;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #316A87;
+    font-weight: 500;
+}
+
+.login-register {
+    padding: 20%;
+    padding-right: 40%;
+    padding-left: 40%;
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 00;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+.botoes-consulta {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    margin-left: 170px;
+}
+
+.btn-acao {
+    background-color: #8B8484;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}

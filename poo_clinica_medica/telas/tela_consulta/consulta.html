@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Consultas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navigation">
+      <button class="btnLogin-popup"> <a href="../telas_Cadastro/Cadastro_Medico/cad_medico.html">Cadastrar</button>
+      <button class="btnLogin-popup"> <a href="consulta.html">Consultas</button>
+    </nav>
+    <nav class="navigation">
+      <button class="btnLogin-popup"><a href="../tela_Login/login.html">Sair</a></button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="painel-consultas">
+      <div class="form-consulta">
+        <label for="paciente">Paciente:</label>
+        <input type="text" id="paciente" placeholder="Escolha o paciente">
+
+        <label for="medico">Médico:</label>
+        <input type="text" id="medico" placeholder="Escolha o Médico">
+
+        <label for="data">Data da Consulta:</label>
+        <input type="date" id="data">
+
+        <button class="btn-adicionar">Adicionar</button>
+      </div>
+
+      <div class="botoes-consulta">
+        <button class="btn-acao">📋 Listar Consultas</button>
+        <button class="btn-acao">🔍 Buscar Consultas</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
